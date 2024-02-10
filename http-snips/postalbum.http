@@ -1,0 +1,18 @@
+### Read all albums in thing
+GET http://localhost:8080/albums
+
+### POST another pre-written album
+POST http://localhost:8080/albums 
+content-type: application/json   
+
+{
+  "id": "4",
+  "title": "The Modern Sound of Betty Carter",
+  "artist": "Betty Carter",
+  "price": 49.99
+}
+
+### DELETE album with given id
+DELETE http://localhost:8080/albums/4
+Content-Type: application/json
+
