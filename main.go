@@ -86,6 +86,10 @@ func delAlbumByID(c *gin.Context) {
 
 func main() {
     router := gin.Default()
+    
+    router.Use(DummyMiddlewareSimple)
+    router.Use(DummyMiddlewareInitializer())
+
     router.GET("/albums", getAlbums)
 	router.POST("/albums", postAlbums)
 
